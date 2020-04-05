@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<robot name="robot_name">
+    <!-- set color -->
+    <material name="white">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+
+    <!-- model description -->
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://simulation/meshes/bottom-1.STL" scale="0.001 0.001 0.001"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+
+        <visual>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <mesh filename="package://simulation/meshes/under-bottom-1.STL" scale="0.001 0.001 0.001"/>
+            </geometry>
+        </visual>
+    </link>
+</robot>
