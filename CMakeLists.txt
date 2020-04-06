@@ -14,8 +14,8 @@ catkin_package()
 
 include_directories(${catkin_INCLUDE_DIRS})
 
-add_executable(modelsim src/modelsim.cpp)
-target_link_libraries(modelsim ${catkin_LIBRARIES})
+add_executable(model_robot src/model_robot.cpp)
+target_link_libraries(model_robot ${catkin_LIBRARIES})
 
 catkin_install_python(
   PROGRAMS
