@@ -65,12 +65,12 @@ int main(int argc, char** argv)
     Robot robot(0.0, 0.0, 0.0);
     robot.vel_sub = nh.subscribe("/robot/cmd_vel", 10, &Robot::velocityCallback, &robot);
     
-    ros::Publisher pose_pub = nh.advertise<geometry_msgs::Pose2D>("/robot/pose", 100);
+    ros::Publisher pose_pub = nh.advertise<geometry_msgs::Pose2D>("/robot/pose", 1000);
 
     ros::Time curr_time = ros::Time::now();
     ros::Time last_time = ros::Time::now();
 
-    ros::Rate r(100);
+    ros::Rate r(1000);
     while(ros::ok())
     {
         curr_time = ros::Time::now();
