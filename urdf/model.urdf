@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="">
     <link name="base_link">
-        <!-- <inertial>
-            <origin xyz="0.028952 0.083101 0.11743" rpy="0 0 0" />
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
             <mass value="1" />
             <inertia
-                ixx="0.00065081"
-                ixy="4.5991E-06"
-                ixz="-4.9332E-06"
-                iyy="0.00074503"
-                iyz="-1.789E-05"
-                izz="0.00049318" />
-        </inertial> -->
+                ixx="1.0" ixy="0.0" ixz="0.0"
+                iyy="1.0" iyz="0.0"
+                izz="1.0" />
+        </inertial>
         <visual>
             <origin xyz="0.14 -0.028 0.14" rpy="0 -3.14159265 -1.57079632" />
             <geometry>
@@ -21,26 +18,23 @@
                 <color rgba="1.0 1.0 1.0 1.0" />
             </material>
         </visual>
-        <!-- <collision>
+        <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <mesh filename="package://simulation/meshes/base.STL" />
             </geometry>
-        </collision> -->
+        </collision>
   </link>
 
   <link name="left_wheel">
-        <!-- <inertial>
-            <origin xyz="0 -0.0073668 -2.7756E-17" rpy="0 0 0" />
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
             <mass value="0.05" />
             <inertia
-                ixx="1.8953E-06"
-                ixy="-5.6692E-24"
-                ixz="-4.6275E-22"
-                iyy="3.6995E-06"
-                iyz="-1.0148E-22"
-                izz="1.8952E-06" />
-        </inertial> -->
+                ixx="1.0" ixy="0.0" ixz="0.0"
+                iyy="1.0" iyz="0.0"
+                izz="1.0" />
+        </inertial>
         <visual>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <geometry>
@@ -50,12 +44,12 @@
                 <color rgba="1.0 1.0 1.0 1.0" />
             </material>
         </visual>
-        <!-- <collision>
+        <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
                 <mesh filename="package://simulation/meshes/link_l.STL" />
             </geometry>
-        </collision> -->
+        </collision>
   </link>
 
     <joint name="joint_l" type="continuous">
@@ -66,17 +60,14 @@
     </joint>
   
     <link name="right_wheel">
-        <!-- <inertial>
+        <inertial>
         <origin xyz="0 -0.0073668 0" rpy="0 0 0" />
         <mass value="0.05" />
         <inertia
-            ixx="1.8953E-06"
-            ixy="9.1249E-23"
-            ixz="2.4436E-23"
-            iyy="3.6995E-06"
-            iyz="-2.6461E-23"
-            izz="1.8952E-06" />
-        </inertial> -->
+                ixx="1.0" ixy="0.0" ixz="0.0"
+                iyy="1.0" iyz="0.0"
+                izz="1.0" />
+        </inertial>
         <visual>
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
         <geometry>
@@ -86,12 +77,12 @@
             <color rgba="1.0 1.0 1.0 1.0" />
         </material>
         </visual>
-        <!-- <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-            <mesh filename="package://simulation/meshes/link_r.STL" />
-        </geometry>
-        </collision> -->
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://simulation/meshes/link_r.STL" />
+            </geometry>
+        </collision>
     </link>
 
     <joint name="joint_r" type="continuous">
@@ -102,17 +93,14 @@
     </joint>
 
     <link name="camera">
-        <!-- <inertial>
+        <inertial>
         <origin xyz="1.6931E-15 0.012095 0.00016081" rpy="0 0 0" />
         <mass value="0.5" />
         <inertia
-            ixx="4.0532E-06"
-            ixy="2.1267E-19"
-            ixz="-7.021E-19"
-            iyy="2.7509E-05"
-            iyz="-6.4547E-10"
-            izz="2.7962E-05" />
-        </inertial> -->
+                ixx="1.0" ixy="0.0" ixz="0.0"
+                iyy="1.0" iyz="0.0"
+                izz="1.0" />
+        </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
@@ -122,12 +110,12 @@
                 <color rgba="1.0 1.0 1.0 1.0" />
             </material>
         </visual>
-        <!-- <collision>
-        <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry>
-            <mesh filename="package://simulation/meshes/link_cam.STL" />
-        </geometry>
-        </collision> -->
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://simulation/meshes/link_cam.STL" />
+            </geometry>
+        </collision>
     </link>
   
     <joint name="joint_cam" type="fixed">
