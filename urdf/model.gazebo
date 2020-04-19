@@ -1,32 +1,14 @@
 <?xml version="1.0"?>
-<robot>
-
-  <!--gazebo reference="left_wheel_hinge">
-      <mu1 value="10000.0" />
-      <mu2 value="10000.0" />
-      <kp value="100000.0" />
-      <kd value="0.00001" />
-      <maxVel value="1.0" />
-      <minDepth value="0.0001" />
-  </gazebo>    
-  <gazebo reference="right_wheel_hinge">
-      <mu1 value="10000.0" />
-      <mu2 value="10000.0" />
-      <kp value="100000.0" />
-      <kd value="0.00001" />
-      <maxVel value="1.0" />
-      <minDepth value="0.0001" />
-  </gazebo-->    
-
+<robot>  
   <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <legacyMode>false</legacyMode>
       <alwaysOn>true</alwaysOn>
       <updateRate>100</updateRate>
-      <leftJoint>joint_r</leftJoint>
+      <leftJoint>joint_l</leftJoint>
       <rightJoint>joint_r</rightJoint>
-      <wheelSeparation>0.01</wheelSeparation>
-      <wheelDiameter>0.06</wheelDiameter>
+      <wheelSeparation>0.4</wheelSeparation>
+      <wheelDiameter>0.12</wheelDiameter>
       <torque>10</torque>
       <commandTopic>/robot/cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
@@ -50,7 +32,7 @@
 
 
   <gazebo reference="camera">
-    <material>Gazebo/Green</material>
+    <material>Gazebo/White</material>
     <sensor type="camera" name="camera1">
       <update_rate>30.0</update_rate>
       <camera name="head">

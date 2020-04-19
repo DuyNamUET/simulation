@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
 <robot name="" xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <!-- <xacro:property name="" value=""/> -->
-
     <xacro:include filename="$(find simulation)/urdf/materials.xacro" />
     <xacro:include filename="$(find simulation)/urdf/model.gazebo" />
 
@@ -19,9 +17,6 @@
             <geometry>
                 <mesh filename="package://simulation/meshes/base.STL" />
             </geometry>
-            <material name="">
-                <color rgba="1.0 1.0 1.0 1.0" />
-            </material>
         </visual>
         <collision>
             <origin xyz="0.14 -0.028 0.14" rpy="0 -3.14159265 -1.57079632" />
@@ -33,7 +28,7 @@
 
   <link name="left_wheel">
         <inertial>
-            <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
             <mass value="0.05" />
             <inertia
                 ixx="1.0" ixy="0.0" ixz="0.0"
@@ -41,13 +36,10 @@
                 izz="1.0" />
         </inertial>
         <visual>
-            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 3.14159265" />
             <geometry>
                 <mesh filename="package://simulation/meshes/link_l.STL" />
             </geometry>
-            <material name="">
-                <color rgba="1.0 1.0 1.0 1.0" />
-            </material>
         </visual>
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
@@ -58,12 +50,10 @@
   </link>
 
     <joint name="joint_l" type="continuous">
-        <origin xyz="0.0 0.06 0.026" rpy="0.0 0.0 3.14159265" />
+        <origin xyz="0.0 0.06 0.026" rpy="0.0 0.0 0.0" />
         <parent link="base_link" />
         <child link="left_wheel" />
         <axis xyz="0 1 0" />
-        <limit effort="10000" velocity="1000"/>
-        <joint_properties damping="1.0" friction="1.0"/>
     </joint>
   
     <link name="right_wheel">
@@ -80,9 +70,6 @@
             <geometry>
                 <mesh filename="package://simulation/meshes/link_r.STL" />
             </geometry>
-            <material name="">
-                <color rgba="1.0 1.0 1.0 1.0" />
-            </material>
         </visual>
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
@@ -97,8 +84,6 @@
         <parent link="base_link" />
         <child link="right_wheel" />
         <axis xyz="0 1 0" />
-        <limit effort="10000" velocity="1000"/>
-        <joint_properties damping="1.0" friction="1.0"/>
     </joint>
 
     <link name="camera">
@@ -115,9 +100,6 @@
             <geometry>
                 <mesh filename="package://simulation/meshes/link_cam.STL" />
             </geometry>
-            <material name="">
-                <color rgba="1.0 1.0 1.0 1.0" />
-            </material>
         </visual>
         <collision>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
