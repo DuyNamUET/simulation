@@ -16,9 +16,9 @@ msg = """
 Reading from the keyboard  and Publishing to Twist!
 ---------------------------
 Moving around:
-        i    
-   j    k    l
-        ,    
+        8    
+    4   5    6
+        2    
 
 t : up (+z)
 b : down (-z)
@@ -33,10 +33,11 @@ CTRL-C to quit
 """
 
 moveBindings = {
-        'i':(1,0,0,0),
-        'j':(0,0,0,1),
-        'l':(0,0,0,-1),
-        ',':(-1,0,0,0),
+        '8':(1,0,0,0),
+        '4':(0,0,0,1),
+        '5':(0,0,0,0),
+        '6':(0,0,0,-1),
+        '2':(-1,0,0,0),
     }
 
 speedBindings={
