@@ -1,5 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<robot name="">
+<?xml version="1.0"?>
+<robot name="" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- <xacro:property name="" value=""/> -->
+
+    <xacro:include filename="$(find simulation)/urdf/materials.xacro" />
+    <xacro:include filename="$(find simulation)/urdf/model.gazebo" />
+
     <link name="base_link">
         <inertial>
             <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />

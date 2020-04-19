@@ -7,15 +7,20 @@ $ cd ..
 $ catkin_make
 ```
 ### Launch Robot
+RViz
 ```
 $ roslaunch simulation display.launch
+```
+Gazebo
+```
+$ roslaunch simulation gazebo.launch
 ```
 ### Control Robot
 Using keyboard as controller
 ```
-    i
-j   k   l
-    ,
+    8
+4   5   6
+    2
 ```
 Max speed robot: 2m/s
 ### Result

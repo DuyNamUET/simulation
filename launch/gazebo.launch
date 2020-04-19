@@ -1,4 +1,5 @@
 <launch>
+    <!-- set the first position of robot -->
     <arg name="x_pos" default="0.0"/>
     <arg name="y_pos" default="0.0"/>
     <arg name="z_pos" default="0.0"/>
@@ -10,14 +11,14 @@
         <arg name="gui" value="true"/>
         <arg name="headless" value="false"/>
         <arg name="debug" value="false"/>
+        <arg name="output" value="log"/>
     </include>
     
-    <node name="tf_footprint_base" pkg="tf" type="static_transform_publisher"
-        	args="0 0 0 0 0 0 base_link base_footprint 40" />
-    <node name="fake_joint_calibration" pkg="rostopic" type="rostopic"
-        	args="pub /calibrated std_msgs/Bool true" />
-    
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find simulation)/urdf/model.xacro'"/>
+
     <node name="spawn_model" pkg="gazebo_ros" type="spawn_model"
-        	args="-file $(find simulation)/urdf/model.urdf -urdf -model model -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos)"
-            output="screen" />
+        	args="-urdf -param robot_description -model model -x $(arg x_pos) -y $(arg y_pos) -z $(arg z_pos)"/>
+
+    <node pkg="simulation" type="keyboard_vel_controller.py" name="keyboard_vel_controller"
+        output="screen" />
 </launch>
