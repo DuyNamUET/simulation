@@ -4,10 +4,10 @@
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <legacyMode>false</legacyMode>
       <alwaysOn>true</alwaysOn>
-      <updateRate>100</updateRate>
+      <updateRate>10</updateRate>
       <leftJoint>joint_l</leftJoint>
       <rightJoint>joint_r</rightJoint>
-      <wheelSeparation>0.4</wheelSeparation>
+      <wheelSeparation>0.12</wheelSeparation>
       <wheelDiameter>0.12</wheelDiameter>
       <torque>10</torque>
       <commandTopic>/robot/cmd_vel</commandTopic>

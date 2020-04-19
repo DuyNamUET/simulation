@@ -54,6 +54,8 @@
         <parent link="base_link" />
         <child link="left_wheel" />
         <axis xyz="0 1 0" />
+        <limit effort="1000" velocity="1000"/>
+        <joint_properties damping="1.0" friction="1.0"/>
     </joint>
   
     <link name="right_wheel">
@@ -84,6 +86,8 @@
         <parent link="base_link" />
         <child link="right_wheel" />
         <axis xyz="0 1 0" />
+        <limit effort="1000" velocity="1000"/>
+        <joint_properties damping="1.0" friction="1.0"/>
     </joint>
 
     <link name="camera">

@@ -24,4 +24,7 @@ Using keyboard as controller
 ```
 Max speed robot: 2m/s
 ### Result
+Rviz
 ![RViz](image/rviz.png)
+Gazebo
+![Gazebo](image/gazebo.png)
